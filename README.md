@@ -57,4 +57,10 @@ roles/create_kvms/vars/kvms.json
         }
 ## Roadmap
 
+- The playbook for destroying VMs
+- Support for the multiple KVM servers
+- Ubuntu 22.04
+- Rocky Linux
+- Fedora CoreOS
+
 
