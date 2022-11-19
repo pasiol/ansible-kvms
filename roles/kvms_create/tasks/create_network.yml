@@ -1,0 +1,15 @@
+---
+- name: List available networks
+  community.libvirt.virt_net:
+    command: list_nets
+  register: result_nets
+- name: Define a new network
+  community.libvirt.virt_net:
+    command: define
+    name: "virbr-{{ clusterName }}"
+    xml: '{{ lookup("template", "network.xml.j2") }}'
+- name: Start a network
+  community.libvirt.virt_net:
+    command: create
+    autostart: true
+    name: "virbr-{{ clusterName }}"

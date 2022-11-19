@@ -1,0 +1,21 @@
+#cloud-config
+packages_update: true
+packages_upgrade: true
+packages:
+  - vim
+  - python3
+hostname: "{{ item.name }}"
+manage_etc_hosts: true
+ssh_pwauth: false
+users:
+  - default
+  - name: {{ operator }}
+    sudo: "ALL=(ALL) NOPASSWD:ALL"
+    shell: "/bin/bash"
+    ssh-authorized-keys:
+      - {{ lookup('file', '{{ playbook_dir }}/.ssh/id_k8s_{{ clusterName }}.pub') }}
+timezone: Europe/Helsinki
+power_state:
+  delay: "+5"
+  mode: reboot
+  condition: true

@@ -1,0 +1,9 @@
+---
+- name:
+  hosts: localhost
+  become_user: root
+  become: true
+  roles:
+  - kvms_create
+  vars:
+    operator: "ansible"
