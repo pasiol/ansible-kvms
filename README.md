@@ -1,8 +1,8 @@
 # Ansible KVMs
 
-Is the experimental Ansible playbook bootstrap cluster of Virtual Machines on the Linux Desktop or Server. The idea is to bootstrap Virtual Machines from JSON-file and it is designed use with the Kubespray. 
+Is the experimental Ansible playbook to bootstrap cluster of Virtual Machines on the Linux Desktop or Server. The idea is to bootstrap Virtual Machines from JSON-file and it is designed use with the Kubespray. 
 
-[[ https://kubernetes.io/docs/setup/production-environment/tools/kubespray/ ]]
+- https://kubernetes.io/docs/setup/production-environment/tools/kubespray/
 
 roles/create_kvms/vars/kvms.json
 
